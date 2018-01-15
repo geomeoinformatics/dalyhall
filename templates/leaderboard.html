@@ -1,0 +1,71 @@
+<header id="header" style="background-color:#0076FF">
+            <ul class="header-inner">
+                <li class="logo" ng-show="screensize <= 749" style="padding: 8px 0 !important; letter-spacing:0.002em !important;">
+                    <a href="/"><font size="3px"><b>DALY HALL</b></font></a>
+                </li>
+                <li class="logo" ng-show="screensize >= 750">
+                    <a href="/"><font size="5px"> <b>DALY HALL</b></font></a>
+                </li>
+                
+                <li class="pull-right">
+                <ul class="top-menu">                   
+                    <li id="top-search">
+                       <a style="background-image: url('/img/icons/search.png');"></a>
+                    </li>
+                </ul>
+                </li>
+               
+                <li class="pull-right">
+                <ul class="top-menu">
+                   <a href="#/profile"> <img class="lv-avatar" src="img/profile-pics/128 (9).jpg" alt=""><span class="hidden-xs"><font color="white">Deeraj Kumar</font></span> </a>
+                </ul>                             
+                </li> 
+               <!-- <li class="dropdown">
+                <a data-toggle="dropdown" class="tm-settings" href="#"></a>
+                <ul class="dropdown-menu dm-icon pull-right"></ul>
+                </li>  -->
+             </ul>                  
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap" style="background-color:#0076FF">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>            
+         
+              <section id="content">
+            <div class="container">             
+                <div class="row">
+                            <div class="card" style="padding:12px!important;">                                               
+                       <div class="card-body table-responsive">
+                           <br><br>
+                        <center>
+                          <div class="card-header">
+                          <center><h3><b>{{quizname}}</b></h3> <!--<small><b>04:23 Minutes left</b></small>--></center></div>
+                            <div class="block-header">
+                        <h2 style="letter-spacing:0.4em;">LEADER BOARD</h2>    
+                            </div>   <br>
+
+                       <div class="card-body" ng-style="screensize <= 749 && {'width': '100%'} || screensize >= 750 && {'width': '50%'}">
+                            <table class="table">
+                                  <tbody>
+                                    <tr ng-repeat="data in datas" ng-if="$index+1 < datas.length">
+                                        <td style="padding-top:14px !important;"> {{$index+1}}</td>
+                                        <td><img class="lv-avatar" ng-src="{{data.img}}" alt="">{{data.name}}</td>
+                                         <td style="padding-top:19px !important;"><i><b>{{data.points}}</b></i></td>
+                                    </tr>
+                                    <tr class="card-header ch-alt m-b-20" ng-repeat="data in datas" ng-if="$index+1 === datas.length">
+                                        <td style="padding-top:14px !important;"><b>2597</b></td>
+                                        <td><img class="lv-avatar" ng-src="{{data.img}}" alt=""><b>{{data.name}}</b></td>
+                                        <td style="padding-top:19px !important;"><i><b>{{data.points}}</b></i></td>
+                                    </tr>
+                                    
+                                </tbody>
+
+                            </table>
+                          </div></center>
+                        </div>
+                       </div>   
+                   </div>
+                 </div>
+            </section>

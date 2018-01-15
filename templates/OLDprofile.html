@@ -1,0 +1,161 @@
+<header id="header" style="background-color:#0076FF">
+            <ul class="header-inner">
+                <li class="logo" ng-show="screensize <= 749" style="padding: 8px 0 !important;  letter-spacing:0.002em !important;">
+                    <a href="/"><font size="3px"><b>DALY HALL</b></font></a>
+                </li>
+                <li class="logo" ng-show="screensize >= 750">
+                    <a href="/"><font size="5px"><b>DALY HALL</b></font></a>
+                </li>
+                
+                <li class="pull-right">
+                <ul class="top-menu">                   
+                    <li id="top-search">
+                       <a style="background-image: url('/img/icons/search.png');"></a>
+                    </li>
+                </ul>
+                </li>
+               
+                <li class="pull-right">
+                <ul class="top-menu">
+                   <a href="#/profile"> <img class="lv-avatar" src="img/profile-pics/128 (9).jpg" alt=""><span class="hidden-xs"><font color="white">Deeraj Kumar</font></span> </a>
+                </ul>                             
+                </li> 
+              <!--  <li class="dropdown">
+                <a item-toggle="dropdown" class="tm-settings" href="#"></a>
+                <ul class="dropdown-menu dm-icon pull-right"></ul>
+                </li>  -->
+             </ul>                  
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap" style="background-color:#0076FF">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>     
+
+            <section id="content">
+                <div class="container">
+                    
+                    <div class="block-header">
+                        <h2>Deeraj Kumar <small>UI Developer, Bangalore</small></h2>
+                    </div>
+                    
+                    <div class="card" id="profile-main">
+                        <div class="pm-overview c-overflow">
+                            <div class="pmo-pic">
+                                <div class="p-relative">
+                                    <a href="#">
+                                        <img src="img/profile-pics/128 (9).jpg" alt=""> 
+                                    </a>
+                                    
+                                   <!--  <div class="dropdown pmop-message">
+                                       <a data-toggle="dropdown" href="#" class="btn bgm-white btn-float z-depth-1">
+                                            <i class="md md-message"></i>
+                                        </a>
+                                        
+                                        <div class="dropdown-menu">
+                                            <textarea placeholder="Write something..."></textarea>
+                                            
+                                            <button class="btn bgm-green btn-icon"><i class="md md-send"></i></button>
+                                        </div>
+                                    </div>-->
+                                    
+                                    <a href="#" class="pmop-edit">
+                                        <i class="md md-camera-alt"></i> <span class="hidden-xs">Update Profile Picture</span>
+                                    </a>
+                                </div>
+                                
+                                
+                                <div class="pmo-stat">
+                                    <h2 class="m-0 c-white">2597</h2>
+                                    Total Rank
+                                </div>
+                            </div>
+                            
+                            <div class="pmo-block pmo-contact" ng-style="screensize <= 749 && {'background-color': 'white'}" style="text-align: left !important;">
+                                <h2 style="letter-spacing:0.4em;">BASIC DETAILS</h2>
+                                
+                                <ul>
+                                    <li><i class="md md-phone"></i> 9876543212</li>
+                                    <li><i class="md md-email"></i> deerajkumar@gmail.com</li>
+                                    <li><i class="socicon socicon-twitter"></i> @deeraj (twitter.com/deeraj.kumar)</li>
+                                    <li>
+                                        <i class="md md-location-on"></i>
+                                        <address class="m-b-0">
+                                           Bangalore <br/>
+                                            India
+                                        </address>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        <div class="pm-body clearfix">
+                            <ul class="tab-nav tn-justified">
+                                <li class="active waves-effect"><a style="letter-spacing:0.4em;">Quizzes Completed</a></li>
+                            </ul>
+                            
+                            <div class="pmb-block">
+                                
+                                
+                                <div class="contacts clearfix row">
+                                    <div class="col-md-4 col-sm-5 col-xs-6">
+                                        <div class="c-item">
+                                            <a href="#" class="ci-avatar">
+                                                <img src="img/1.jpg" style="height:150px;width:100%" alt="">
+                                            </a>
+                                            
+                                            <div class="c-info">
+                                                <h4><b> Olympic Quiz</b></h4>
+                                                 <p>&nbsp;&nbsp; 10 questions - 245 played</p>
+                                            </div>
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="...">    
+                                            <div class="btn-group" role="group">
+                                                <a href="" style="background-color:#9b9b9b; width: 100% !important;" class="btn btn-primary">Play For Free</a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-5 col-xs-6">
+                                        <div class="c-item">
+                                            <a href="#" class="ci-avatar">
+                                                <img src="img/2.jpg" style="height:150px;width:100%" alt="">
+                                            </a>
+                                            
+                                            <div class="c-info">
+                                                <h4><b>Unicorns of the World</b></h4>
+                                                 <p>&nbsp;&nbsp; 10 questions - 123 played</p>
+                                            </div>
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="...">    
+                                            <div class="btn-group" role="group">
+                                                <a href="" style="background-color:#9b9b9b; width: 100% !important;" class="btn btn-primary">Play For Free</a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-5 col-xs-6">
+                                        <div class="c-item">
+                                            <a href="#" class="ci-avatar">
+                                                <img src="img/3.jpg" style="height:150px;width:100%" alt="">
+                                            </a>
+                                            
+                                            <div class="c-info">
+                                                <h4><b>Sully Movie</b></h4>
+                                                 <p>&nbsp;&nbsp;10 questions - 737 played</p>
+                                            </div>
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="...">    
+                                            <div class="btn-group" role="group">
+                                                <a href="" style="background-color:#9b9b9b; width: 100% !important;" class="btn btn-primary">Play For Free</a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> 

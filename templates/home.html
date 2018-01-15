@@ -1,0 +1,134 @@
+<header id="header" style="background-color:#0076FF">
+            <ul class="header-inner">
+                <li class="logo" ng-show="screensize <= 749" style="padding: 8px 0 !important; letter-spacing:0.002em !important;">
+                    <a href="/"><font size="3px"><b>DALY HALL</b></font></a>
+                </li>
+                <li class="logo" ng-show="screensize >= 750">
+                    <a href="/"><font size="5px"><b>DALY HALL</b></font></a>
+                </li>
+                
+                <li class="pull-right">
+                <ul class="top-menu">                   
+                    <li id="top-search">
+                        <a style="background-image: url('/img/icons/search.png');"></a>
+                    </li>
+                </ul>
+                </li>
+               
+                <li class="pull-right">
+                <ul class="top-menu">
+                  <a href="#/profile"> <img class="lv-avatar" src="img/profile-pics/128 (9).jpg" alt=""><span class="hidden-xs"><font color="white">Deeraj Kumar</font> </span>
+                  </a> </ul>                             
+                </li> 
+               <!-- <li class="dropdown">
+                <a data-toggle="dropdown" class="tm-settings" href="#"></a>
+                <ul class="dropdown-menu dm-icon pull-right"></ul>
+                </li> --> 
+             </ul>                  
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap" style="background-color:#0076FF;">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>            
+         
+            <section id="content">
+            <div class="container">             
+                <div class="row">
+                        <div class="col-sm-8">
+                            <div class="row"> 
+                            <div class="block-header">
+                        <h2 style="letter-spacing:0.4em;">NEW CONTEST QUIZZES</h2>    
+                    </div>                       
+                        <div class="col-sm-4" ng-repeat="data in datas">
+                            <div class="card" ng-show="data.category == 'paid'">
+                            <a href="#/payment/{{data.name}}">
+                              <img ng-src="{{data.img}}" class="w3-round-large" style="height:150px;width:100%">
+                              <div class="w3-container">
+                               <h4 style="padding-left: 13px!important;"><b>{{data.name}}</b></h4>
+                                    <p style="padding-left: 13px!important;">{{data.quiz}}</p></div></a>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                  <div class="btn-group" role="group">
+                                    <a href="#/payment/{{data.name}}" style="background-color:#20c07a;" class="btn btn-primary"><b>{{data.rupee}}</b></a>                                  
+                                  </div>
+                                </div> 
+                              </div> 
+                                                                                  
+                            <div class="card" ng-show="data.category == 'free'">
+                            <a href="#/about/{{data.name}}">
+                              <img ng-src="{{data.img}}" class="w3-round-large" style="height:150px;width:100%">
+                              <div class="w3-container">
+                               <h4 style="padding-left: 13px!important;"><b>{{data.name}}</b></h4>
+                                    <p style="padding-left: 13px!important;">{{data.quiz}}</p></div></a>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                  <div class="btn-group" role="group">
+                                    <a href="#/about/{{data.name}}" style="background-color:#9b9b9b" class="btn btn-primary"><b>{{data.rupee}}</b></a>
+                                  </div>
+                                </div> 
+                              </div> </div>                                                 
+                            </div> 
+                        
+                   
+                  <div class="row">
+                    <div class="block-header">
+                        <h2 style="letter-spacing:0.4em;">FUN QUIZZES</h2>    
+                    </div>
+                        <div class="col-sm-4" ng-repeat="fun in funs">
+                             <div class="card" ng-show="fun.category == 'free'">
+                             <a href="#/fun/{{fun.name}}">
+                              <img ng-src="{{fun.img}}" class="w3-round-large" style="height:150px;width:100%"> 
+                               <div class="w3-container">
+                               <h4 style="padding-left: 13px!important;"><b>{{fun.name}}</b></h4>
+                                    <p style="padding-left: 13px!important;">{{fun.quiz}}</p></div></a>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                  <div class="btn-group" role="group">
+                                    <a href="#/fun/{{fun.name}}" style="background-color:#9b9b9b" class="btn btn-primary"><b>{{fun.rupee}}</b></a>
+                                  </div>
+                                </div>                                                      
+                            </div>  
+                            <div class="card" ng-show="fun.category == 'paid'">
+                            <a href="#/payment1/{{fun.name}}">
+                              <img ng-src="{{fun.img}}" class="w3-round-large" style="height:150px;width:100%"> 
+                               <div class="w3-container">
+                               <h4 style="padding-left: 13px!important;"><b>{{fun.name}}</b></h4>
+                                    <p style="padding-left: 13px!important;">{{fun.quiz}}</p></div></a>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                  <div class="btn-group" role="group">
+                                     <a class="btn btn-primary" href="#/payment1/{{fun.name}}" style="background-color:#20c07a" ><b>{{fun.rupee}}</b></a>
+                                  </div>
+                                </div>                                                     
+                            </div>                                
+                        </div>  
+                      </div> 
+                 </div>
+               
+                    <div class="col-sm-4">
+                    <center>
+                    <div class="block-header">
+                        <h2 style="letter-spacing:0.4em;">LEADER BOARD</h2>    
+                    </div></center>
+                            <div class="card" style="background-color:transparent !important;">
+                                                
+                       <div class="card-body table-responsive" style="background-color:transparent !important;">
+                            <table class="table" style="background-color:transparent !important;">
+                                <tbody>
+                                    <tr ng-repeat="data in leaders" ng-if="$index+1 < leaders.length">
+                                        <td style="padding-top:14px !important;"> {{$index+1}}</td>
+                                        <td><img class="lv-avatar" ng-src="{{data.img}}" alt="">{{data.name}}</td>
+                                         <td style="padding-top:19px !important;"><i><b>{{data.points}}</b></i></td>
+                                    </tr>
+                                    <tr class="card-header ch-alt" ng-repeat="data in leaders" ng-if="$index+1 === leaders.length">
+                                        <td style="padding-top:14px !important;"><b>2597</b></td>
+                                        <td><img class="lv-avatar" ng-src="{{data.img}}" alt=""><b>{{data.name}}</b></td>
+                                        <td style="padding-top:19px !important;"><i><b>{{data.points}}</b></i></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>

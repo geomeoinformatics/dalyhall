@@ -1,0 +1,142 @@
+<header id="header" style="background-color:#0076FF">
+            <ul class="header-inner">
+                <li class="logo" ng-show="screensize <= 749" style="padding: 8px 0 !important;  letter-spacing:0.002em !important;">
+                    <a href="/"><font size="3px"><b>DALY HALL</b></font></a>
+                </li>
+                <li class="logo" ng-show="screensize >= 750">
+                    <a href="/"><font size="5px"><b>DALY HALL</b></font></a>
+                </li>
+                
+                <li class="pull-right">
+                <ul class="top-menu">                   
+                    <li id="top-search">
+                       <a style="background-image: url('/img/icons/search.png');"></a>
+                    </li>
+                </ul>
+                </li>
+               
+                <li class="pull-right">
+                <ul class="top-menu">
+                   <a href="#/profile"> <img class="lv-avatar" src="img/profile-pics/128 (9).jpg" alt=""><span class="hidden-xs"><font color="white">Deeraj Kumar</font></span> </a>
+                </ul>                             
+                </li> 
+              <!--  <li class="dropdown">
+                <a item-toggle="dropdown" class="tm-settings" href="#"></a>
+                <ul class="dropdown-menu dm-icon pull-right"></ul>
+                </li>  -->
+             </ul>                  
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap" style="background-color:#0076FF">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>     
+
+            <section id="content">
+                <div class="container">
+                    
+                    <div class="block-header">
+                        <h2>Deeraj Kumar <small>UI Developer, Bangalore</small></h2>
+                    </div>
+                    
+                    <div class="card" id="profile-main">
+                        <div class="pm-overview c-overflow">
+                            <div class="pmo-pic">
+                                <div class="p-relative">
+                                    <a href="#">
+                                        <img src="img/profile-pics/128 (9).jpg" alt=""> 
+                                    </a>                                    
+                                    <a href="#" class="pmop-edit">
+                                        <i class="md md-camera-alt"></i> <span class="hidden-xs">Update Profile Picture</span>
+                                    </a>
+                                </div>
+                                
+                                
+                                <div class="pmo-stat">
+                                    <h2 class="m-0 c-white">2597</h2>
+                                    Total Rank
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pm-body clearfix">
+                            <ul class="tab-nav tn-justified">
+                                <li class="active waves-effect"><a style="letter-spacing:0.4em;">BASIC DETAILS</a></li>
+                            </ul>
+                            
+                            <div class="pmb-block">
+                                
+                                <div class="pmbb-body p-l-30">
+                                    <div class="pmbb-view">
+                                        <dl class="dl-horizontal">
+                                            <dt>Full Name:</dt>
+                                            <dd>Deeraj Kumar</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>Location:</dt>
+                                            <dd>Bangalore</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>Gender:</dt>
+                                            <dd>Male</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>Birthday:</dt>
+                                            <dd>June 23, 1990</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>Age:</dt>
+                                            <dd>26</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>School/College:</dt>
+                                            <dd>College</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>Life's Question:</dt>
+                                            <dd>College</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="row"> 
+                            <div class="block-header">
+                        <h2 style="letter-spacing:0.4em;">QUIZZES COMPLETED</h2>    
+                    </div>                       
+                        <div class="col-sm-4" ng-repeat="data in datas">
+                            <div class="card" ng-show="data.category == 'paid'">
+                            <a href="#/payment/{{data.name}}">
+                              <img ng-src="{{data.img}}" class="w3-round-large" style="height:150px;width:100%">
+                              <div class="w3-container">
+                               <h4 style="padding-left: 13px!important;"><b>{{data.name}}</b></h4>
+                                    <p style="padding-left: 13px!important;">{{data.quiz}}</p></div></a>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                  <div class="btn-group" role="group">
+                                    <a href="#/payment/{{data.name}}" style="background-color:#20c07a;" class="btn btn-primary"><b>{{data.rupee}}</b></a>                                  
+                                  </div>
+                                </div> 
+                              </div> 
+                                                                                  
+                            <div class="card" ng-show="data.category == 'free'">
+                            <a href="#/about/{{data.name}}">
+                              <img ng-src="{{data.img}}" class="w3-round-large" style="height:150px;width:100%">
+                              <div class="w3-container">
+                               <h4 style="padding-left: 13px!important;"><b>{{data.name}}</b></h4>
+                                    <p style="padding-left: 13px!important;">{{data.quiz}}</p></div></a>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                  <div class="btn-group" role="group">
+                                    <a href="#/about/{{data.name}}" style="background-color:#9b9b9b" class="btn btn-primary"><b>{{data.rupee}}</b></a>
+                                  </div>
+                                </div> 
+                              </div> </div>                                                 
+                            </div> 
+                        </div>    
+                                    
+                    </div>
+                </div>
+            </section> 

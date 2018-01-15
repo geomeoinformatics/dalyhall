@@ -1,0 +1,66 @@
+<header id="header" style="background-color:#0076FF">
+            <ul class="header-inner">
+                <li class="logo" ng-show="screensize <= 749" style="padding: 8px 0 !important;  letter-spacing:0.002em !important;">
+                    <a href="/"><font size="3px"><b>DALY HALL</b></font></a>
+                </li>
+                <li class="logo" ng-show="screensize >= 750">
+                    <a href="/"><font size="5px"><b>DALY HALL</b></font></a>
+                </li>
+                
+                <li class="pull-right">
+                <ul class="top-menu">                   
+                    <li id="top-search">
+                        <a style="background-image: url('/img/icons/search.png');"></a>
+                    </li>
+                </ul>
+                </li>
+               
+                <li class="pull-right">
+                <ul class="top-menu">
+                   <a href="#/profile"> <img class="lv-avatar" src="img/profile-pics/128 (9).jpg" alt=""><span class="hidden-xs"><font color="white">Deeraj Kumar</font></span> </a>
+                </ul>                             
+                </li> 
+              <!--  <li class="dropdown">
+                <a item-toggle="dropdown" class="tm-settings" href="#"></a>
+                <ul class="dropdown-menu dm-icon pull-right"></ul>
+                </li>  -->
+             </ul>                  
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap" style="background-color:#0076FF">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>            
+         
+        <section id="content">
+            <div class="card container"> <br><br> <br><br>
+                   <div class="card-header">
+                          <center><h2>{{quizname}} <!--<small><b>04:23 Minutes left</b></small>--></h2></center></div><br>
+                        
+                        <center>
+                            
+                            <div>
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>1</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>2</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>3</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>4</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>5</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>6</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>7</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>8</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon" style="background-color: #0076FF !important;"><font color="white"><b>9</b></font></button>&nbsp;&nbsp;
+                                <button class="btn btn-icon"  style="background-color: #0076FF !important;"><font color="white"><b>10</b></font></button>&nbsp;&nbsp;
+
+                            </div><br><br>
+                            <div>
+                            <font size="4px" color="gray">You have answered all 10 questions<br>Now you can see all the answers and if you answered them right.</font><br><br>
+                            <br>
+                            <a class="btn btn-primary" style="background-color:#0076FF !important;" href="#/resultdetails">Show Me Answers</a>
+                            <br><br><br><br><br><br><br>
+                            </div>  </center>
+                            
+           </div>
+                      
+               
+    </section>

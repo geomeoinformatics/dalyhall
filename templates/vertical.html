@@ -1,0 +1,123 @@
+<header id="header" style="background-color:#0076FF">
+            <ul class="header-inner">
+                <li class="logo" ng-show="screensize <= 749" style="padding: 8px 0 !important;  letter-spacing:0.002em !important;">
+                    <a href="/"><font size="3px"><b>DALY HALL</b></font></a>
+                </li>
+                <li class="logo" ng-show="screensize >= 750">
+                    <a href="/"><font size="5px"><b>DALY HALL</b></font></a>
+                </li>
+                
+                <li class="pull-right">
+                <ul class="top-menu">                   
+                    <li id="top-search">
+                      <a style="background-image: url('/img/icons/search.png');"></a>
+                    </li>
+                </ul>
+                </li>
+               
+                <li class="pull-right">
+                <ul class="top-menu">
+                  <a href="#/profile">  <img class="lv-avatar" src="img/profile-pics/128 (9).jpg" alt=""><span class="hidden-xs"><font color="white">Deeraj Kumar</font></span></a> 
+                </ul>                             
+                </li> 
+              <!--  <li class="dropdown">
+                <a data-toggle="dropdown" class="tm-settings" href="#"></a>
+                <ul class="dropdown-menu dm-icon pull-right"></ul>
+                </li> --> 
+             </ul>                  
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap" style="background-color:#0076FF">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>            
+         
+            <section id="content">
+            <div class="container">             
+                <div class="row">
+          
+                    <div class="col-sm-3">
+                       
+                            <div class="card">
+                              <div class="w3-container">  
+                              <img ng-src="{{data.img}}" class="w3-round-large" style="height:150px;width:100%">
+                              <div class="w3-container">
+                               <h4><b>&nbsp;&nbsp; {{data.name}}</b></h4>
+                                    <p>&nbsp;&nbsp;  {{data.quiz}}</p>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                  <div class="btn-group" role="group">
+                                    <a style="background-color:#0076FF" class="btn btn-primary">4:23 minutes left</a>
+                                    
+                                    </div>
+                                   </div> 
+                                  </div>                                                  
+                                </div>                     
+                            </div><br>
+                   
+                         
+                            <div class="col-sm-2">
+                              <div ng-style="screensize >= '750' && {'padding-left':'95px'}  || screensize <= '749' && {'padding-left':'12px'}">
+                                <button ng-click="gotoElement('0')" class="btn btn-icon" ng-style="selectedindex == '0' && {'background-color':'#0076FF'}  || selectedindex != '0' && {'background-color':'#CFD8DC'}"><font color="white"><b>1</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="gotoElement('1')" class="btn btn-icon" ng-style="selectedindex == '1' && {'background-color':'#0076FF'}  || selectedindex != '1' && {'background-color':'#CFD8DC'}"><font color="white"><b>2</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="gotoElement('2')" class="btn btn-icon" ng-style="selectedindex == '2' && {'background-color':'#0076FF'}  || selectedindex != '2' && {'background-color':'#CFD8DC'}"><font color="white"><b>3</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="gotoElement('3')" class="btn btn-icon" ng-style="selectedindex == '3' && {'background-color':'#0076FF'}  || selectedindex != '3' && {'background-color':'#CFD8DC'}"><font color="white"><b>4</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="gotoElement('4')" class="btn btn-icon" ng-style="selectedindex == '4' && {'background-color':'#0076FF'}  || selectedindex != '4' && {'background-color':'#CFD8DC'}"><font color="white"><b>5</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="gotoElement('5')" class="btn btn-icon" ng-style="selectedindex == '5' && {'background-color':'#0076FF'}  || selectedindex != '5' && {'background-color':'#CFD8DC'}"><font color="white"><b>6</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="gotoElement('6')" class="btn btn-icon" ng-style="selectedindex == '6' && {'background-color':'#0076FF'}  || selectedindex != '6' && {'background-color':'#CFD8DC'}"><font color="white"><b>7</b></font></button>&nbsp;&nbsp;
+                                <button scroll-on-click href ="#7" class="btn btn-icon" ng-style="selectedindex == '7' && {'background-color':'#0076FF'}  || selectedindex != '7' && {'background-color':'#CFD8DC'}"><font color="white"><b>8</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="gotoElement('8')" class="btn btn-icon" ng-style="selectedindex == '8' && {'background-color':'#0076FF'}  || selectedindex != '8' && {'background-color':'#CFD8DC'}"><font color="white"><b>9</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="gotoElement('9')" class="btn btn-icon" ng-style="selectedindex == '9' && {'background-color':'#0076FF'}  || selectedindex != '9' && {'background-color':'#CFD8DC'}"><font color="white"><b>10</b></font></button>&nbsp;&nbsp;                          
+                            </div>                       
+                          </div>
+                        </center><br>
+                    </div>
+
+                <div class="col-sm-9" id="scrollArea">
+                     <div class="card" style="padding:12px!important;"> 
+                                                                 
+                       <div ng-repeat="item in data.question" id="{{$index}}"><br>  <br> 
+                            <center><p class="w3-padding" ng-style="screensize <= 749 && {'width': '100%'} || screensize >= 750 && {'width': '50%'}"><font size="4px" color="gray"><b>{{$index+1}}) {{item.ques}}</b></font></p>
+                            <div style="background-color:transparent !important;"><img ng-src="{{item.problem}}" ng-if="item.problem != null"  ng-style="screensize <= 749 && {'width': '80%'} || screensize >= 750 && {'width': '25%'}"><br>
+                            <img ng-src="{{item.solution}}" ng-if="item.solution != null"  ng-style="screensize <= 749 && {'width': '80%'} || screensize >= 750 && {'width': '25%'}" style="height: 200px; width: 80%"><br></div> 
+                             
+                            <div class="radio m-b-15" ng-style="screensize <= 749 && {'width': '80%'} || screensize >= 750 && {'width': '25%'}" style="text-align: left !important;">
+                             <label class="radio radio-inline m-r-20">
+                                <input type="radio" name="inlineRadioOptions" ng-model="item.answer" value="{{item.a}}">
+                                 <i class="input-helper"></i> 
+                                <font size="4">
+                               {{item.a}}</font> 
+                             </label><br>
+                              <label class="radio radio-inline m-r-20">
+                                <input type="radio" name="inlineRadioOptions" ng-model="item.answer" value="{{item.b}}">
+                                 <i class="input-helper"></i> 
+                                <font size="4">
+                               {{item.b}}</font> 
+                             </label><br>
+                              <label class="radio radio-inline m-r-20">
+                                <input type="radio" name="inlineRadioOptions" ng-model="item.answer" value="{{item.c}}">
+                                 <i class="input-helper"></i> 
+                                <font size="4">
+                                {{item.c}}</font> 
+                             </label><br>
+                              <label class="radio radio-inline m-r-20">
+                                <input type="radio" name="inlineRadioOptions" ng-model="item.answer" value="{{item.d}}">
+                                 <i class="input-helper"></i> 
+                                <font size="4">
+                                {{item.d}}</font> 
+                             </label><br>
+                             <label class="radio radio-inline m-r-20" ng-if="item.e != null">
+                                <input type="radio" name="inlineRadioOptions" ng-model="item.answer" value="{{item.e}}">
+                                 <i class="input-helper"></i> 
+                                <font size="4">
+                                {{item.e}}</font> 
+                             </label><br>
+                            </div><hr>
+                            </center>
+                         
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>

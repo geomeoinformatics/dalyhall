@@ -1,0 +1,83 @@
+<header id="header" style="background-color:#0076FF">
+            <ul class="header-inner">
+               <li class="logo" ng-show="screensize <= 749" style="padding: 8px 0 !important;  letter-spacing:0.002em !important;">
+                    <a href="/"><font size="3px"><b>DALY HALL</b></font></a>
+                </li>
+                <li class="logo" ng-show="screensize >= 750">
+                    <a href="/"><font size="5px"><b>DALY HALL</b></font></a>
+                </li>
+                
+                <li class="pull-right">
+                <ul class="top-menu">                   
+                    <li id="top-search">
+                        <a style="background-image: url('/img/icons/search.png');"></a>
+                    </li>
+                </ul>
+                </li>
+               
+                <li class="pull-right">
+                <ul class="top-menu">
+                   <a href="#/profile"> <img class="lv-avatar" src="img/profile-pics/128 (9).jpg" alt=""><span class="hidden-xs"><font color="white">Deeraj Kumar</font></span> </a>
+                </ul>                             
+                </li> 
+              <!--  <li class="dropdown">
+                <a item-toggle="dropdown" class="tm-settings" href="#"></a>
+                <ul class="dropdown-menu dm-icon pull-right"></ul>
+                </li>  -->
+             </ul>                  
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap" style="background-color:#0076FF">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>            
+         
+            
+          <section id="content">
+            <div class="card container" id = "div-to-scroll" style="background-color:#FFFFFF !important;"> <br>
+                   <div class="card-header">
+                          <center><h2><b>{{quizname}}</b> <!--<small><b>04:23 Minutes left</b></small>--></h2></center></div>
+                        
+                        <center>
+                            
+                            <div>
+                                <button ng-click="go('0')" class="btn btn-icon" ng-style="datas[0].status == 'correct' && {'background-color':'#33691E'}  || datas[0].status == 'wrong' && {'background-color':'#b71c1c'} || datas[0].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>1</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('1')" class="btn btn-icon" ng-style="datas[1].status == 'correct' && {'background-color':'#33691E'}  || datas[1].status == 'wrong' && {'background-color':'#b71c1c'} || datas[1].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>2</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('2')" class="btn btn-icon" ng-style="datas[2].status == 'correct' && {'background-color':'#33691E'}  || datas[2].status == 'wrong' && {'background-color':'#b71c1c'} || datas[2].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>3</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('3')" class="btn btn-icon" ng-style="datas[3].status == 'correct' && {'background-color':'#33691E'}  || datas[3].status == 'wrong' && {'background-color':'#b71c1c'} || datas[3].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>4</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('4')" class="btn btn-icon" ng-style="datas[4].status == 'correct' && {'background-color':'#33691E'}  || datas[4].status == 'wrong' && {'background-color':'#b71c1c'} || datas[4].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>5</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('5')" class="btn btn-icon" ng-style="datas[5].status == 'correct' && {'background-color':'#33691E'}  || datas[5].status == 'wrong' && {'background-color':'#b71c1c'} || datas[5].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>6</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('6')" class="btn btn-icon" ng-style="datas[6].status == 'correct' && {'background-color':'#33691E'}  || datas[6].status == 'wrong' && {'background-color':'#b71c1c'} || datas[6].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>7</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('7')" class="btn btn-icon" ng-style="datas[7].status == 'correct' && {'background-color':'#33691E'}  || datas[7].status == 'wrong' && {'background-color':'#b71c1c'} || datas[7].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>8</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('8')" class="btn btn-icon" ng-style="datas[8].status == 'correct' && {'background-color':'#33691E'}  || datas[8].status == 'wrong' && {'background-color':'#b71c1c'} || datas[8].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>9</b></font></button>&nbsp;&nbsp;
+                                <button ng-click="go('9')" class="btn btn-icon" ng-style="datas[9].status == 'correct' && {'background-color':'#33691E'}  || datas[9].status == 'wrong' && {'background-color':'#b71c1c'} || datas[9].status == 'unanswer' && {'background-color':'#FFF176'}"><font color="white"><b>10</b></font></button>&nbsp;&nbsp;
+
+                            </div><br>
+                            <div ng-repeat="item in datas" ng-if="selectedindex == $index">
+                            <p ng-style="screensize <= 749 && {'width': '100%'} || screensize >= 750 && {'width': '50%'}"><font size="4px" color="black">{{item.ques}}</font></p>
+                            <div style="background-color:transparent !important;"><img ng-src="{{item.problem}}" ng-if="item.problem != null"  ng-style="screensize <= 749 && {'width': '80%'} || screensize >= 750 && {'width': '50%'}"><br>
+                            <img ng-src="{{item.solution}}" ng-if="item.solution != null"  ng-style="screensize <= 749 && {'width': '80%'} || screensize >= 750 && {'width': '50%'}"><br></div> 
+                            <p style="font-size:18px !important;">Your Answer:</p>
+                            <p style="font-size:18px !important;">{{item.answer}}</p>
+                            <p style="font-size:18px !important;"><b>Correct Answer:&nbsp;&nbsp;{{item.correctansdata}}</b></p>
+                           
+                            <i class="md md-thumb-up" ng-show="item.status == 'correct'" style="color:#0076FF;font-size: 35px !important;"></i>
+                            <i class="md md-thumb-down" ng-show="item.status == 'wrong' || item.status == 'unanswer'" style="color:#0076FF;font-size: 35px !important;"></i>
+                            <br><br>
+                            <a class="btn btn-primary" style="background-color:#0076FF !important;" ng-click="gonext()" ng-show="selectedindex != '9'">Next Question</a>
+                            <a class="btn btn-primary" style="background-color:#0076FF !important;" href="#/leaderboard/{{quizname}}" ng-show="selectedindex == '9'">Done</a><br><br>
+                           <div class="row">
+                           <div class="col-sm-4"></div>
+                           <div class="col-sm-2">
+                            <a style="color:gray !important;text-decoration: none !important;font-size: 18px !important;" href="/">Quiz Leaderboard</a></div>
+                            <div class="col-sm-2">
+                            <a style="color:gray !important;text-decoration: none !important;font-size: 18px !important;" href="/">Daly Hall Home</a></div>
+                            </div>
+                            <br><br>
+                            </div>
+                            <br>
+                            </div>
+                        </center>
+                </div>
+                </section>
